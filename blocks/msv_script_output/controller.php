@@ -71,5 +71,3 @@ class Controller extends BlockController {
 		return nl2br($s);
 	}
 }
-
-?>

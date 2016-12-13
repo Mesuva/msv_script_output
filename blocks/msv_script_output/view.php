@@ -47,4 +47,3 @@ if(!$u->isSuperUser() && !$u->inGroup(\Concrete\Core\User\Group\Group::getByName
 		echo ' - <em>' . t('no outputs'). '</em></p>';
 	}
 }
-?>
