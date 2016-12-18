@@ -9,7 +9,7 @@ class Controller extends Package {
 
 	protected $pkgHandle = 'msv_script_output';
 	protected $appVersionRequired = '5.7.5';
-	protected $pkgVersion = '0.9.2';
+	protected $pkgVersion = '1.0';
 	
 	public function getPackageDescription() {
 		return t("A block to control the output of ad-hoc scripts");

@@ -7,10 +7,10 @@ $u = new User();
 if(!$u->isSuperUser() && !$u->inGroup(\Concrete\Core\User\Group\Group::getByName('Administrators')) && !$page->isEditMode()){
 	echo $content; 
 } else {
-	echo '<p class="alert alert-info"><i class="fa fa-warning"></i> <strong>';
+	echo '<div class="ccm-edit-mode-disabled-item"><i class="fa fa-warning"></i> <strong>';
 
 	if ($placeholderText) {
-		echo $placeholderText;
+		echo h($placeholderText);
 	} else {
 		echo t('Additional HTML/Scripts');
 	}
@@ -41,9 +41,9 @@ if(!$u->isSuperUser() && !$u->inGroup(\Concrete\Core\User\Group\Group::getByName
 		    echo $last;
 		}
 		
-		echo '</p>';
+		echo '</div>';
 	
 	} else {
-		echo ' - <em>' . t('no outputs'). '</em></p>';
+		echo ' - <em>' . t('no outputs'). '</em></div>';
 	}
 }

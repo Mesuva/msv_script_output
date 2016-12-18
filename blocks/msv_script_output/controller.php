@@ -47,7 +47,7 @@ class Controller extends BlockController {
 	} 
   	
 	public function save($data) { 
-		$args['placeholderText'] = isset($data['placeholderText']) ? trim($data['placeholderText']) : '';
+		$args['placeholderText'] = isset($data['placeholderText']) ? substr(trim($data['placeholderText']), 0, 255) : '';
 		$args['content'] = isset($data['content']) ? trim($data['content']) : '';
 		$args['header_content'] = isset($data['header_content']) ? trim($data['header_content']) : '';
 		$args['footer_content'] = isset($data['footer_content']) ? trim($data['footer_content']) : '';
